@@ -5,7 +5,9 @@ Examples
 "din"      =>  "((("
 "recede"   =>  "()()()"
 "Success"  =>  ")())())"
-"(( @"     =>  "))(("
+"(( @"     =>  "))((" 
 """
+
 def duplicate_encode(word):
-    return "".join('(' if word.count(w) == 1 else ')' for w in word.lower())
+    word = word.lower()
+    return "".join('(' if word.count(w) == 1 else ')' for w in word)
